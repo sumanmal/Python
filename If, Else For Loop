@@ -122,3 +122,18 @@ else:
   print("Enter the correct value of s")
 
 # Case Switch is not present in python
+
+
+l = [1,2,3,4,5,6,7]
+# i is a local variable here for this loop work
+for i in l:
+  print(i)
+
+t = (1,2,3,4,5,6,6)
+for i  in t:
+  print(i)
+l = [1,4,5.6,4.7j,"Suman", "Saurav", 14+77j, False ]
+for i in l:
+  print("Data Type of",i,"Element is :",type(i))
+
+
