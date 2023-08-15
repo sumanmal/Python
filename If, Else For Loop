@@ -4,3 +4,9 @@ if a < 15:
    print("My name is Suman")
 
 print(a)
+
+# pass in if condition
+a = 7
+if a < 15:
+  pass # It will simply pass the condition 
+a  
