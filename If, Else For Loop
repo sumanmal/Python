@@ -92,3 +92,33 @@ else:
 # Not recomendded 
 a = 9
 if a == 9:print("Valid")
+
+
+## Nested if else condition 
+s = input("Enter the value of s:" )
+course = input("Enter the course name: ")
+service = input("Enter the service name: ")
+if s == "oneneuron":
+  if course == "DSA":
+    print ("Yes it is available")
+  elif course == "BLOCKCHAIN":
+    print("This is not available now. Please wait")
+  elif course == "FSDS":
+    print("Yes it is available, you can join")
+  else:
+    print("Please raise your demand")
+elif s == "oneneuronservice":
+  if service == "courserequest":
+    print("Raise a demand and it will be fulfilled in 60 days")
+  elif service == "module":
+     print("Raise a demand and it will be fulfilled in 1 day")
+  elif service == "doubt":
+     print("Raise a demand and it will be fulfilled in 16 hours")
+  elif service == "workwithus":
+     print("Raise a demand and it will be fulfilled in 48 hours")
+  else:
+    print("Kindy connect with our support team, We will provide you required solution")
+else:
+  print("Enter the correct value of s")
+
+
