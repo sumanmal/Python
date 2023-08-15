@@ -73,3 +73,18 @@ if Coupon == "SUMAN500":
   print("You will be able to get one neuron with this amount", paid_amount)
 else:
   print("Kindly use a valid coupon code")
+
+
+
+# Study hours 
+study_hour = int(input("Enter study hours:" ))
+if study_hour < 1:
+  print("It may take 8 months to do a transition")
+elif study_hour < 4 and study_hour > 1:
+  print("It may take 6 months to do a transition")
+elif study_hour < 10 and study_hour > 4:
+  print("It may take 4 months to do a transition")
+elif study_hour > 10:
+  print("It may take 3 months to do a transition")
+else:
+  print("It will be difficult")
