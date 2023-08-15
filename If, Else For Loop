@@ -88,3 +88,7 @@ elif study_hour > 10:
   print("It may take 3 months to do a transition")
 else:
   print("It will be difficult")
+
+# Not recomendded 
+a = 9
+if a == 9:print("Valid")
