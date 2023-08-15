@@ -136,4 +136,11 @@ l = [1,4,5.6,4.7j,"Suman", "Saurav", 14+77j, False ]
 for i in l:
   print("Data Type of",i,"Element is :",type(i))
 
+l = [2,45,78,12,"Sudh",6 +7j,[56,67,78]]
+l2 = []
+for i in l:
+    if type(i) == int:
+       l2.append(i)
+  
+l2
 
