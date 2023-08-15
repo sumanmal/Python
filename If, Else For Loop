@@ -63,3 +63,13 @@ elif Total_price <= 7000:
   print("Discount will be :", discount)
 else:
    print("Wont be able to give any discount") 
+
+# Coupon Code = SUMAN500
+
+Coupon = input("Enter the coupon code :")
+if Coupon == "SUMAN500":
+  print("You will be able to get a discount of 5 %")
+  paid_amount = 7080 - 7080*0.05
+  print("You will be able to get one neuron with this amount", paid_amount)
+else:
+  print("Kindly use a valid coupon code")
