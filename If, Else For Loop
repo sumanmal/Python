@@ -51,3 +51,15 @@ elif income < 90:
   print("I will buy a new house")
 else:
   print("I won't be able to buy anything")
+
+
+# Discount of the course 
+Total_price = int(input())
+if Total_price > 20000:
+  discount = Total_price * 0.20
+  print("Discount will be :", discount)
+elif Total_price <= 7000:
+  discount = Total_price * 0.05
+  print("Discount will be :", discount)
+else:
+   print("Wont be able to give any discount") 
