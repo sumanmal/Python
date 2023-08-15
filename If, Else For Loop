@@ -10,3 +10,17 @@ a = 7
 if a < 15:
   pass # It will simply pass the condition 
 a  
+
+# if condition
+a = 7
+if a < 15:
+  print("My name is Suman")
+
+# if else statement 
+if 24 < 15:
+  print("Second block")
+
+if 10 < 3:
+  print("10 is less than 3")
+else:
+  print("if conditon is false")
