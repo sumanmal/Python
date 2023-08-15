@@ -144,3 +144,33 @@ for i in l:
   
 l2
 
+l = [2,45,78,12,12,12,12,"Suman",6+7j,[56,67,78,"dsfdsf"]]
+#Q1. try to print index of all the elements 
+#Q2. Try to extract all the list of char if element is string 
+#Q3. Try to return a list after dong the square of all the int element 
+
+
+
+for i in range(len(l)) :
+  print("Index of element",i,"is =",l[i])
+  
+
+char = [] 
+for i in l  :
+ if type(i) == str:
+    for j in i:
+      char.append(j)
+print("The different char in the string: ",char)
+
+l2 = []
+for i in l :
+  if type(i) == int:
+    l2.append(i*i)
+
+print("The square of different integer is: ", l2)
+
+
+
+
+
+
