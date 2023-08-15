@@ -1,2 +1,6 @@
+# if condition
+a = 7
+if a < 15:
+   print("My name is Suman")
 
-
+print(a)
