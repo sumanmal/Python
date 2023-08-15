@@ -24,3 +24,30 @@ if 10 < 3:
   print("10 is less than 3")
 else:
   print("if conditon is false")
+
+
+# Multiple if condition 
+# Use of elif 
+income = 100
+ 
+if income < 50:
+  print("I will buy a new phone")
+elif income < 70:
+  print("I will buy a new car")
+elif income < 90:
+  print("I will buy a new house")
+else:
+  print("I won't be able to buy anything")
+
+
+  # Taking values from user
+income = int(input()) # Input is always a string so we type cast it to integer 
+ 
+if income < 50:
+  print("I will buy a new phone")
+elif income < 70:
+  print("I will buy a new car")
+elif income < 90:
+  print("I will buy a new house")
+else:
+  print("I won't be able to buy anything")
