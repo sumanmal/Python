@@ -72,3 +72,17 @@ for i in d:
 
 print(l1)
 print(l2)
+
+
+t = {
+"ineuron": {"a": 14,"b": 51,"c": 4} ,
+"course": {"d": 45,"e": 34,"f": 1}
+}
+max = 0
+for i in t.values():
+  for j in i.values():
+    if (max < j):
+      max = j
+  print("The maximum value in is ",max)
+  max = 0
+    
