@@ -1,1 +1,58 @@
+#HOW TO COUNT NUMBER OF LETTER IN A STRING
+#Reverse a string
+s = "This is a python class"
+count = 0
+for i in range(len(s)-1,-1,-1):
+  #count = count + 1
+  count+=1
+  print(s[i], end="")
+print("\r")
+print(count)
+
+s = "This is a python class"
+count = len(s) - 1
+while (count>=0):
+  print(s[count], end="") 
+  count = count - 1
+
+s = "ineuron"
+v = "AaEeIiOoUu"
+
+for i in s:
+  if i in v:
+    print(i,"is vowel")
+  else:
+    print(i,"is not vowel")
+
+s1 = "TENET"
+s2 = "MALYALAM"
+s3 = "eye"
+s4 =""
+for i in (range(len(s3)-1,-1,-1)):
+    print(s3[i],end = "")
+
+s = input("Enter the input :")
+v = s[::-1]
+if s == v:
+  print("Palindrom: ",s)
+else:
+  print("Not a palindrome: ",s)
+
+s = input("Enter the word: ")
+if s == s[::-1]:
+  print("This is a palindrome: ",s)
+else:
+  print("Not a palindrome: ",s)
+
+word = input("Enter the word: ")
+rev = ""
+i = len(word) - 1
+while (i >= 0):
+  rev = rev + word[i]
+  i = i - 1 
+#print(rev)
+if (word.lower() == rev.lower()):
+  print("The word",word," is a palindrome")
+else:
+  print("The word",word," is not a palindrome")
 
