@@ -85,4 +85,30 @@ for i in t.values():
       max = j
   print("The maximum value in is ",max)
   max = 0
-    
+
+
+t = {
+ "ineuron": {"a": 14,"b": 51,"c": 4} ,
+ "course": {"d": 45,"e": 34,"f": 1},
+ "g": 34,
+ "h": [45,6,7,8,9,3],
+ "i": (45,34,2),
+ "k": "Suman"
+}
+
+
+max = 0
+for i in t.values():
+  if (type(i) == dict):
+    for j in i.values():
+      if (type(j) == int):
+        if (max < j):
+          max = j
+  elif(type(i) == int):
+    if (i > max):
+      max = i
+  elif(type(i) == list):
+    if(max(i)> max):
+      max = max(i)
+
+print(max)
