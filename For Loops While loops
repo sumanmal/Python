@@ -1,1 +1,21 @@
+l = ["name", "email_id", "phone_no","address"]
+for i in l:
+  print (i + " Suman")
+l
 
+s = "INEURON"
+for i in s:
+  print(i)
+
+for i in l:
+  print(i)
+else :
+  print("If for loop is going to complete itself then it will come to else")
+
+for i in l:
+  if i != "name":
+    print("Complete the course")
+    break
+  print(i)
+else :
+  print("Check this statement")
