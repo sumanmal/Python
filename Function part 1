@@ -1,1 +1,106 @@
+#if we are planning to create a function in pythin we have to use "def"
 
+def test():
+  pass
+
+def test1():
+  print("This is my first function")
+
+test1()
+type(test1()) # By default type of a function is "NoneType"
+str(test1()) # It will give you "None" (Default blank object)
+
+def test2():
+  return "This is my second function"
+
+test2()
+type(test2())
+test2() + " - by Suman"
+
+def test3():
+  return 242525
+
+test3()
+type(test3())
+
+def test4():
+  return 4,3,"Suman",[1,2,4,5,6]
+
+b = test4()
+b
+
+def test5():
+  return 4,3,"Suman",[1,2,4,5,6], 4+12j
+
+x,y,u,v,w = test5()
+print(x)
+print(y)
+print(u)
+print(v)
+print(w)
+
+def test6():
+  a = 6*7/6
+  return a 
+test6()
+type(test6())
+
+#list as an input and list as n output 
+
+l = [3,4,5,6,7,7,"Suman",[1,2,4,5,"Sam"],(1,2,4,55,5,"12+14j",12+14j),{1:1,2:3,4:99}]
+
+def test7(a):
+ 
+  if type(a) == list:
+    n = []
+    for i in a:
+      if type(i) == int:
+        n.append(i)
+      elif (type(i) == list or type(i) == tuple):
+        for j in i:
+          if type(j) == int:
+            n.append(j)
+      elif(type(i) == dict):
+        for k in i.values():
+          if (type(k) == int):
+            n.append(k)
+    return n
+  else:
+    return ("Please enter the list")
+test7(l)
+#min(test7(l))
+#max(test7(l))
+
+
+d = {1:"Suman",
+     2:"Suman1",
+     3:"Suman2",
+     4:"Suman3",
+     5:"Suman4",
+     6:"Suman5",
+     7:"Suman6",
+     "Kohinoor": 8
+     }
+
+def test8(a):
+  if type(a) == dict:
+    l = []
+    for i in a:
+      l.append(i)
+    return l
+  else:
+    return (a," Entered value is not a dictionary")
+
+p = "Suman"
+test8(p)
+
+
+def test9(a,b):
+  if type(a) == list and type(b) == list:
+    a.extend(b)
+    return a
+  else:
+    return ("Either of your data is not a list")
+
+#test9(2424,"Suman") #Either of your data is not a list
+test9([1,2,4,5,6,7],[1,6,7,8,9,9])
