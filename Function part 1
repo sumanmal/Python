@@ -100,7 +100,28 @@ def test9(a,b):
     a.extend(b)
     return a
   else:
+
     return ("Either of your data is not a list")
+
+
+
+
+n = int(input("Enter the size of triangle: "))
+def triangle (a):
+  # Doc String 
+  """This is a function helps to create a triangle
+    you can enter the input as integer and it will return the triangle
+   """
+  if type(a) == int:
+    for i in range(0,n+1):
+      for j in range(0,i+1):
+         if i > j:
+           print(".",end = "")
+      print("\r\n")
+  else:
+    return ("Enter a int value for the size of traingle")
+triangle(n)
+
 
 #test9(2424,"Suman") #Either of your data is not a list
 test9([1,2,4,5,6,7],[1,6,7,8,9,9])
