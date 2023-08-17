@@ -18,3 +18,44 @@ def length(s):
     print("Enter a string value")
 
 length(string)
+
+
+'''
+Write a function which takes dictionary as an input and return a 
+list with all the values from the dictionary even in case of 2 level of nesting 
+'''
+
+d = {
+ "ineuron": {"a": 14,"b": 51,"c": 4} ,
+ "course": {"d": 45,"e": 34,"f": 1},
+ "g": 34,
+ "h": [45,6,7,8,9,3],
+ "i": (45,34,2),
+ "k": "Suman",
+ "l": 15+4j
+}
+
+
+def dict_list(a):
+  '''
+  This function takes the input as a dictionary and returns all of its values 
+  in a list.
+  '''
+  if type(a) == dict:
+      l = []
+      for i in a.values():
+          if type(i) == dict:
+            for j in i.values():
+              if type(j) == list or type(j) == tuple:
+                  l.extend(j)
+              else:
+                  l.append(j)
+          elif type(i) == list or type(i) == tuple:
+              l.extend(i)
+          else:
+              l.append(i)
+      return l
+  else:
+    return ("Enter a dictionary")
+
+dict_list(p)
