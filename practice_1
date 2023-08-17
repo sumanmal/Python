@@ -1,0 +1,20 @@
+#Program 1: Write a function which will take the string as an input and return the length of the string 
+# Do not use the len function anywhere in your code.
+
+
+string = input("Enter the word: ")
+
+def length(s):
+   '''This function takes the input as a string and return its length
+   if the input is not of string type then it will return the message 
+   "Enter a string value"
+   '''
+   if type(s) == str:
+      count = 0
+      for i in s:
+        count = count + 1
+      return (count)
+   else:
+    print("Enter a string value")
+
+length(string)
