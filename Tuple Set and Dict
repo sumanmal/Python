@@ -40,4 +40,21 @@ print(tuple5.index(9))
 '''Why do we need a tuple ?
 ---> Data Security etc.
 ---> Passwords etc.
+---> Fixed type of collections.
 '''
+
+
+'''
+Nested Tuples are possible 
+List is also possible to keep inside a tuple
+'''
+tuple6 = (34,55,66,88,(12,335,34))
+print(tuple6)
+tuple7 = (34,55,66,88,[12,335,34])
+print(tuple7)
+'''
+New item can be assigned in the list inside a tuple
+In the index level we cannot modify a tuple 
+'''
+tuple7[4][0] = 'new_item_assigned'
+print(tuple7)
