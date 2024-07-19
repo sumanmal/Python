@@ -58,3 +58,10 @@ In the index level we cannot modify a tuple
 '''
 tuple7[4][0] = 'new_item_assigned'
 print(tuple7)
+
+
+'''Type casting is possible'''
+list4 = list(tuple7)
+print(list4)
+tuple8 = tuple(list4)
+print(tuple8)
