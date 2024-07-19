@@ -1,0 +1,14 @@
+a = 'i am worKing in college'
+b= "suman"
+print(a.split('w'))
+print(a.swapcase())
+print(a.title())
+print(a.capitalize())
+print(" ".join(b))
+print(reversed("suman"))
+for i in reversed("Suman"):
+    print(i)
+
+s = " Suman"
+print(s.rstrip())
+print(s.lstrip())
