@@ -1,1 +1,43 @@
+print('Good morning')
+'''Tuple
+Collection of homogeneous and heterogeneous items
+(item1, item2, item3 )
+'''
+tuple1 = (1,'Suman',7, 45+18j, 546.65, True)
+print(type(tuple1))
+list1 = [1,'Suman',7, 45+18j, 546.65, True]
+print(type(list1))
 
+'''Slicing operation will be exactly same as list'''
+tuple2 = (1,4.5,12,55)
+print(tuple2[3])
+print(tuple2[::-1])
+print(tuple2[0:3:2])
+print(tuple2[-1])
+
+'''We can reassign an item in a list data type'''
+list2 = [1,4,5,6,89]
+list3 = [3,5,777,54]
+list2 [3] = 'new_item'
+print(list2)
+
+'''We cannot assign an object in a tuple index'''
+tuple3 = (3,5,777,54)
+'''
+TypeError : 'tuple' object does not support item assignment
+Tuple is IMMUTABLE 
+'''
+# tuple3[1] = 'new_item'
+print(tuple3)
+
+'''we can append two tuples like lists datasets'''
+tuple4 = (1,2,4)
+tuple5 = (7,8,9)
+print(tuple4 + tuple5)
+print(tuple5*2)
+print(tuple5.index(9))
+
+'''Why do we need a tuple ?
+---> Data Security etc.
+---> Passwords etc.
+'''
