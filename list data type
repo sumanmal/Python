@@ -1,1 +1,24 @@
+list1 = [1,2,56,7]
+print(type(list1))
+
+list2 = ['Suman', 12, True, 43.50]
+print(type(list2[2]))
+print(type(list2[3]))
+
+list3 = list2[::-1]
+print(list3)
+
+list4 = ['suman', 'mal', 3453, (4+12j) , True, 12.5]
+print(list4[-1:6])
+print(list4[0][1])
+print(type(list4[0][1]))
+print(list4[3].real)
+print(list4[3].imag)
+
+list5 = ['suman', 'word', 5242]
+list6 = ['xyz', 'fhd', 12.12]
+print(list5 + list6)
+print(list5 + ["Suman"])
+print(list5*2)
+
 
