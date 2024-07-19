@@ -1,5 +1,0 @@
-d1 = {}
-Value = ("Suman",9677258423,"Alcove")
-key = ("Key1","Key2","Key3") 
-d = d1.fromkeys(key,Value)
-d
