@@ -12,3 +12,26 @@ for i in reversed("Suman"):
 s = " Suman"
 print(s.rstrip())
 print(s.lstrip())
+print(s.replace('u','xyz'))
+print(s.replace('t','xyz'))
+print("Suman\tMal.".expandtabs())
+print(s.center(40,'@'))
+c = "are     Indians are best in the world are"
+print(c.strip("are"))
+
+print(s.isdigit())
+print(s.isalpha())
+print(s.islower())
+print(b.islower())
+print(s.isspace())
+print(s.isspace())
+print(s.isnumeric())
+d = "Suman"
+print(d.endswith('n'))
+print(d.startswith(' '))
+print(s.startswith(' '))
+print(s.istitle())
+
+print(d.encode())
+s = "123"
+print(type(int(s)))
