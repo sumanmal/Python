@@ -115,3 +115,68 @@ print(set5)
 set6 = {"Suman", "suman"}  # set is case-sensitive.
 print(set6)
 
+"""Dict Data Type :
+"""
+dict1 = {}
+print(type(dict1))
+dict1 = {1, 2, 3, 4}
+print(type(dict1))
+dict2 = {4: "Suman"}
+dict3 = {"key1": 5454, "key2": "Suman", "key3": "Local", 45: [1, 2, 3, 4]}
+list1 = [1, 2, 8, 8, 7]  # internally the system will assign an index to it.
+print(dict3)
+print(dict3["key1"])
+print(dict3['key3'])
+dict4 = {12.2222: ["start", "end", 4, 5, 6, 7, 8, 8]}
+print(dict4)
+dict5 = {"_key": {1, 2, 3, 4}}
+print(dict5)
+print(dict5["_key"])
+
+"""
+Duplicate Key Values
+Key should be unique 
+In case of duplicate keys it will take the end assignment in the key.
+"""
+dict6 = {"key1": "start_element", "key2": "Suman", "key1": "end_element", 45: [1, 2, 3, 4]}
+print(dict6)
+print(dict6["key1"])  # latest assignment in the dict.
+
+dict7 = {'name': 'Suman Mal', 'Mobile_number': 83838383, 'email_id': "sumanmalxrt@gmail.com",
+         "key1": "start_element", "key2": "Suman", "key3": "end_element", 45: [1, 2, 3, 4],
+         "key4": (1, 2, 3, 4, 5, 6), "key5": {5, 7, 5, 7, 5}
+         }
+
+'''accessing values in a dict '''
+
+print(dict7)
+print(dict7["key3"])
+print(type(dict7["key3"]))
+print(type(dict7["key4"][5]))
+print(dict7["key4"][5])
+print(dict7.keys())
+print(dict7.values())
+print(dict7.items())
+print(type(dict7.items()))
+
+dict8 = {'key1': 'Suman', "key2": [1, 2, 3, 400]}
+dict8[4] = "xrt"
+print(dict8)
+dict8['key1'] = 12  # if key is already available now it will update.
+print(dict8)
+
+#  we cannot be able to change the name of the key, but we can delete it.
+
+del dict8['key1']
+print(dict8)
+del dict8
+
+dict9 = {"key1": 'sksksk', "key2": "HDFS"}
+dict1_ = {"key3": 4343, "key4": [124422, 1, 2, 2]}
+print(dict9)
+
+print(dict7.get("key1"))
+
+print(c)
+
+
