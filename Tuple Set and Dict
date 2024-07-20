@@ -65,3 +65,53 @@ list4 = list(tuple7)
 print(list4)
 tuple8 = tuple(list4)
 print(tuple8)
+
+"""Set
+Is a collection which will always try to hold unique elements.
+"""
+
+list1 = [1, 2, 3, 4, 5, 5, 5, 5, 5, 44, 44, 5, 2, 5, 31, 2, 2, 2, 0]
+print(set(list1))
+s = {}
+print(type(s))  # type is dict
+set1 = {1, 2, 3, 4}
+print(type(set1))  # type is set
+set2 = {1, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 5, 5, 6}
+print(set2)
+# print(set2[3])
+'''
+It is unordered collection
+TypeError: 'set' object is not subscriptable
+ '''
+list2 = list(set2)
+print(list2[3])
+
+#we can able to add an element in set
+set2.add("new_element")
+print(set2)
+
+'''We cannot add list inside a set
+Error - TypeError: unhashable type: 'list'
+Why ?
+It can find a uniqueness in primitive data type and not in collections 
+'''
+#set2.add([1,2,3,4])
+#print(set2)
+
+#set3 = {[1,2,3,5],1,3,4,56,46,46}
+#print(set3)
+
+'''
+We can put a tuple inside a set because it is immutable but we cannot place a list inside the set.
+'''
+set4 = {(1,2,3,5),1,3,4,56,46,46}
+print(set4)
+set5 = {(1,2,3,5),1,3,4,(1,2,3,5),56,46,46}
+print(set5)  # It will remove the duplicate tuple inside a set.
+set5.remove(4)  # if the key is not present then it will throw key error.
+print(set5)
+set5.discard(5)
+print(set5)
+set6 = {"Suman", "suman"}  # set is case-sensitive.
+print(set6)
+
