@@ -1,125 +1,119 @@
-# if condition
-a = 7
+print("Good morning")
+a = 10
+print(a < 15)
+print(type(a < 15))
+
+"""
+We dont need curly braces to print to maintain a block
+Whenever we are trying to write a cond. we should put a colon.
+If we write a statement and we are not utilizing it then we have to write pass keyword.
+"""
 if a < 15:
-   print("My name is Suman")
+    #  Error -> expected an indented block after 'if' statement on line 11.
+    pass  # It will simply pass the condition
 
-print(a)
 
-# pass in if condition
-a = 7
 if a < 15:
-  pass # It will simply pass the condition 
-a  
+    print("This value is less than 15")
 
-# if condition
-a = 7
-if a < 15:
-  print("My name is Suman")
-
-# if else statement 
 if 24 < 15:
-  print("Second block")
+    print("This value is less than 15")
 
 if 10 < 3:
-  print("10 is less than 3")
+    print("10 is lesser than 3.")
 else:
-  print("if conditon is false")
+    print("If statement is wrong.")
 
+if 5 < 10:
+    print("5 is lesser than 10.")
+else:
+    print("If statement is wrong.")
 
-# Multiple if condition 
-# Use of elif 
+"""Always maintain an indentation in conditional statements."""
+
+#  Scenario 1
 income = 100
- 
 if income < 50:
-  print("I will buy a new phone")
+    print("I will be able to buy phone.")
 elif income < 70:
-  print("I will buy a new car")
+    print("I will be able to buy car.")
 elif income < 90:
-  print("I will buy a new house")
+    print("I will be able to rent a house.")
 else:
-  print("I won't be able to buy anything")
+    print("I won't be able to buy anything")
 
-
-  # Taking values from user
-income = int(input()) # Input is always a string so we type cast it to integer 
- 
+#  Scenario 2
+income = int(input("Enter your income: "))
 if income < 50:
-  print("I will buy a new phone")
+    print("I will be able to buy phone.")
 elif income < 70:
-  print("I will buy a new car")
+    print("I will be able to buy car.")
 elif income < 90:
-  print("I will buy a new house")
+    print("I will be able to rent a house.")
 else:
-  print("I won't be able to buy anything")
+    print("I won't be able to buy anything")
 
-
-# Discount of the course 
-Total_price = int(input())
+#  Scenario 3
+Total_price = int(input("Enter the price : "))
 if Total_price > 20000:
-  discount = Total_price * 0.20
-  print("Discount will be :", discount)
+    discount = Total_price * 0.20
+    print("Discount will be ", discount)
 elif Total_price <= 7000:
-  discount = Total_price * 0.05
-  print("Discount will be :", discount)
+    discount = Total_price * 0.05
+    print("Discount will be ", discount)
 else:
-   print("Wont be able to give any discount") 
+    print("Won't be able to provide any discount")
 
-# Coupon Code = SUMAN500
-
-Coupon = input("Enter the coupon code :")
-if Coupon == "SUMAN500":
-  print("You will be able to get a discount of 5 %")
-  paid_amount = 7080 - 7080*0.05
-  print("You will be able to get one neuron with this amount", paid_amount)
+#  Scenario 4
+coupon_code = input("Enter the coupon code: ")
+if coupon_code == "SUMAN5":
+    print("You will able to get a discount of 5 %")
+    Total_price = Total_price - Total_price * 0.05
+    print("You will have to pay this amount: ", Total_price)
 else:
-  print("Kindly use a valid coupon code")
+    print("You will not get any discount.")
+    print("You will have to pay this amount: ", Total_price)
 
-
-
-# Study hours 
-study_hour = int(input("Enter study hours:" ))
+#  Scenario 5
+study_hour = int(input("Enter the study hours: "))
 if study_hour < 1:
-  print("It may take 8 months to do a transition")
-elif study_hour < 4 and study_hour > 1:
-  print("It may take 6 months to do a transition")
-elif study_hour < 10 and study_hour > 4:
-  print("It may take 4 months to do a transition")
-elif study_hour > 10:
-  print("It may take 3 months to do a transition")
+    print("It will take 8-9 months of time to transition.")
+elif 4 > study_hour >= 1:
+    print("It will take 6 months of time to transition.")
+elif 9 > study_hour >= 4:
+    print("It will take 3 months of time to transition.")
 else:
-  print("It will be difficult")
+    print("Be real !")
+
+#  Scenario 6
+string1 = input("Enter the CODE: ")
+subject = input("Enter the SUBJECT: ")
+service = input("Enter the service: ")
+if string1 == "COMPLETE":
+    if subject == "DSA":
+        print("Yes it is available for DSA")
+    elif subject == "BLOCKCHAIN":
+        print("It is not available.")
+    elif subject == "FSDS":
+        print("Yes it is available for FSDS")
+    else:
+        print("This subject is not available and please kindly raise your demand.")
+elif string1 == "ONESERVICE":
+    if service == "subjectrequest":
+        print("This is subject request.")
+    elif service == "modulerequest":
+        print("This is module request.")
+    elif service == "doubt":
+        print("This is doubt request.")
+    elif service == "workwithus":
+        print("This is work with us request.")
+else:
+    print("kindly connect with the support.")
+
 
 # Not recomendded 
 a = 9
 if a == 9:print("Valid")
-
-
-## Nested if else condition 
-s = input("Enter the value of s:" )
-course = input("Enter the course name: ")
-service = input("Enter the service name: ")
-if s == "oneneuron":
-  if course == "DSA":
-    print ("Yes it is available")
-  elif course == "BLOCKCHAIN":
-    print("This is not available now. Please wait")
-  elif course == "FSDS":
-    print("Yes it is available, you can join")
-  else:
-    print("Please raise your demand")
-elif s == "oneneuronservice":
-  if service == "courserequest":
-    print("Raise a demand and it will be fulfilled in 60 days")
-  elif service == "module":
-     print("Raise a demand and it will be fulfilled in 1 day")
-  elif service == "doubt":
-     print("Raise a demand and it will be fulfilled in 16 hours")
-  elif service == "workwithus":
-     print("Raise a demand and it will be fulfilled in 48 hours")
-  else:
-    print("Kindy connect with our support team, We will provide you required solution")
-else:
-  print("Enter the correct value of s")
 
 # Case Switch is not present in python
 
