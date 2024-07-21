@@ -1,1 +1,97 @@
+print("Good Morning")
+list1 = ["name", "emailed", "phone", "address"]
+for i in list1:
+    print(i)
+s = "Good Evening"
+for i in s:
+    print(i)
+
+"""
+For Else type of statement
+Once it completes the parsing of the entire list it will move to else statement.
+"""
+#  Scenario 1
+for i in list1:
+    print(i)
+else:
+    print("If for loop is not going to complete itself then it will come to else.")
+#  Scenario 2
+for i in list1:
+    if i == "phone":
+        break
+    print(i)
+else:
+    print("This is for else statement.")
+
+#  Scenario 3
+s = "Suman mal"
+for i in s:
+    pass
+else:
+    print("Dont Execute")
+
+#  While Loops
+"""
+while will check the condition if it is true or not.
+"""
+a = 1
+while a < 6:
+    print(a)
+    a += 1
+
+b = 1
+for b in range(1, 6):
+    print(b)
+
+c = 1
+while c < 5:
+    print("The value of c is ", c)
+    if c == 4:
+        break
+    c += 1
+
+d = 1
+while d < 5:
+    print(d)
+    d = d + 1
+    if d == 3:
+        continue  # statement which will through your control to the loop.
+
+while d < 10:
+    d += 1
+    break
+
+# Scenario 1
+
+"""
+Range Function
+1. Starting from 0 to end number excluding the upper bound.
+2. range(start, end , increment).
+"""
+print(range(6))
+l1 = list(range(6))
+print(l1)
+
+range(4, 10)
+l2 = list(range(4, 10))
+print(l2)
+
+range(3, 15, 2)
+l3 = list(range(3, 15, 2))
+print(l3)
+
+l4 = list(range(3, 10, -1))
+print(l4)
+
+l5 = list(range(10, 6, -1))
+print(l5)
+
+for i in range(7):
+    print(i)
+
+n = 5
+for i in range(0, n):
+    for j in range(0, i + 1):
+        print("*", end="")
+    print("\r")
 
