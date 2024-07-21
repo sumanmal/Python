@@ -194,3 +194,38 @@ for i in list5:
 print(temp_list6)
 print(temp_list7)
 
+
+""" Another method 
+Do not use index function it will only give the index value of the first occurrence of the item.
+range function generates value excluding the upper bound.
+"""
+print("Range of the list is : ", range(len(list5)))
+temp_list8 = []
+temp_list9 = []
+for i in range(len(list5)):
+    print("The index of element ", list5[i], " is ", i)
+    if int is type(list5[i]):
+        temp_list9.append(list5[i] * list5[i])
+    elif str is type(list5[i]):
+        for j in list5[i]:
+            temp_list8.append(j)
+    elif list is type(list5[i]):
+        for k in list5[i]:
+            if int is type(k):
+                temp_list9.append(k * k)
+            elif str is type(k):
+                for x in k:
+                    temp_list8.append(x)
+
+print(temp_list8)
+print(temp_list9)
+
+
+"""
+Enumerate is an inbuilt function which will return a tuples of its own indexes and elements.
+"""
+for i in enumerate(list5):
+    print(i)
+
+for i,j in enumerate(list5):
+    print(i,j)
