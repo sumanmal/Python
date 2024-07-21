@@ -117,54 +117,80 @@ if a == 9:print("Valid")
 
 # Case Switch is not present in python
 
+#  Loops
 
-l = [1,2,3,4,5,6,7]
-# i is a local variable here for this loop work
-for i in l:
-  print(i)
+# Scenario 1
+list1 = [1, 2, 3, 6, 9, 10]
+for item in list1:
+    print(item)  # item is local variable.
+# Scenario 2
+string1 = "Suman"
+for i in string1:
+    print(i)
+# Scenario 3
+tuple1 = (6, 5, 4, 3, 2, 1)
+for i in tuple1:
+    print(i)
+# Scenario 4
+"""try to print data type of each element in a list"""
+list2 = [1, 4, 5.7, 6, 7 + 6j, "Suman"]
+for i in list2:
+    print(type(i), "type of ", i)
+# Scenario 5
+"""
+Add 2 in in each and every element of a list.
+"""
+list3 = [1, 7, 44, 2]
+for i in list3:
+    print(i + 2)
+print(list3)
+# Scenario 5
+"""
+Add 2 in in each and every element of a list.
+And return it as a list.
+"""
+list4 = [3, 7, 22, 4]
+temp_list4 = []
+for i in list4:
+    temp_list4.append(i + 2)
+print(temp_list4)
+# Scenario 6
+"""
+Filter out integer from the list.
+"""
+list5 = [2, 4, 7, 12, "Suman", 6 + 7j, [5, 6, 8, "riyal"]]
+temp_list5 = []
+for i in list5:
+    if int == type(i):
+        temp_list5.append(i)
+    elif list == type(i):
+        for j in i:
+            if int == type(j):
+                temp_list5.append(j)
+print(temp_list5)
 
-t = (1,2,3,4,5,6,6)
-for i  in t:
-  print(i)
-l = [1,4,5.6,4.7j,"Suman", "Saurav", 14+77j, False ]
-for i in l:
-  print("Data Type of",i,"Element is :",type(i))
-
-l = [2,45,78,12,"Sudh",6 +7j,[56,67,78]]
-l2 = []
-for i in l:
-    if type(i) == int:
-       l2.append(i)
-  
-l2
-
-l = [2,45,78,12,12,12,12,"Suman",6+7j,[56,67,78,"dsfdsf"]]
-#Q1. try to print index of all the elements 
-#Q2. Try to extract all the list of char if element is string 
-#Q3. Try to return a list after dong the square of all the int element 
-
-
-
-for i in range(len(l)) :
-  print("Index of element",i,"is =",l[i])
-  
-
-char = [] 
-for i in l  :
- if type(i) == str:
-    for j in i:
-      char.append(j)
-print("The different char in the string: ",char)
-
-l2 = []
-for i in l :
-  if type(i) == int:
-    l2.append(i*i)
-
-print("The square of different integer is: ", l2)
-
-
-
-
-
+"""
+Q. Try to print index of all the elements ?
+Q. Try to extract all the list of char if element is string ?
+Q. Try to return a list after doing a square of all the int elements ?
+"""
+#  list5 = [2, 4, 7, 12, "Suman", 6 + 7j, [5, 6, 8, "riyal"]
+temp_list6 = []
+temp_list7 = []
+for i in list5:
+    print("Item: ", i, " is present in index ", list5.index(i))
+    if str == type(i):
+        for j in i:
+            temp_list6.append(j)
+    elif list == type(i):
+        for k in i:
+            if str == type(k):
+                for h in k:
+                    temp_list6.append(h)
+            elif int == type(k):
+                temp_list7.append(k * k)
+    elif int == type(i):
+        temp_list7.append(i * i)
+print(temp_list6)
+print(temp_list7)
 
