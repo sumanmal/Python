@@ -1,1 +1,151 @@
+print("Good Morning")
+# Scenario 1
+"""
+How to count number of letters in a string without inbuilt fn?
+"""
+s = "Suman Mal is going to file ITR."
+print(len(s))
+count = 0
+for i in s:
+    count += 1
+print("The length of string is ", count)
+
+"""
+Print a string in reverse order. Not using string slicing operation.
+"""
+
+s1 = "Suman Mal is going to file ITR."
+print(s1[::-1])
+# for loop
+for i in range(len(s1) - 1, -1, -1):
+    print(s[i], end="")
+print("\r")
+
+# while loop
+i = len(s1) - 1
+s2 = ""
+while i >= 0:
+    print(s[i], end="")
+    i -= 1
+print("\r")
+
+"""
+Find Vowel in a String 
+"""
+s3 = "Suman Mal is going to file ITR."
+s4 = "AaEeIiOoUu"
+
+for i in s3:
+    if i in s4:
+        print("This is Not Vowel in the string :", i)
+    else:
+        print("This is a Vowel in the string :", i)
+
+"""
+Check palindrome ?
+"""
+s5 = input("Enter a String :")
+s6 = s5[::-1]
+print(s6)
+if s6 != s5:
+    print("Not a Palindrome")
+else:
+    print("Palindrome")
+
+for i in range(len(s5) - 1, -1, -1):
+    if s5[i] != s5[len(s5) - 1 - i]:
+        print(s5, "- Not a palindrome")
+        break
+else:
+    print(s5, "- Palindrome")
+
+s7 = ""
+for i in range(len(s5) - 1, -1, -1):
+    s7 = s7 + s5[i]
+if s5 != s7:
+    print("not a palindrome..")
+else:
+    print("palindrome..")
+
+#  Scenario 2
+"""
+Q. Create two lists one having keys length less than 5 and another one having length more than 5.
+Q. 
+"""
+dict1 = {"India": "IN",
+         "Canada": "CA",
+         "China": "CH",
+         "United States Of America": "USA"
+         }
+l_greater = []
+l_smaller = []
+
+for i in dict1:
+    if len(i) > 5:
+        l_greater.append(i)
+    else:
+        l_smaller.append(i)
+print(l_greater)
+print(l_smaller)
+
+# Scenario 3
+"""
+Q. Find the maximum value in each nested dictionary.
+"""
+dict2 = {"neuron": {"a": 14, "b": 10, "c": 4},
+         "course": {"d": -24, "e": -34, "f": -1}
+         }
+
+for i in dict2.values():
+    list1 = []
+    for j in i.values():
+        list1.append(j)
+    print(max(list1), end=" ")
+print("\r")
+
+"""
+Q. Find Max Value from the dict .
+"""
+dict3 = {"neuron": {"a": 14, "b": 10, "c": 4},
+         "course": {"d": -24, "e": -34, "f": -1},
+         "g": 34,
+         "h": [1, 5, 77, 12],
+         "i": (45, 34, 2),
+         "k": "Suman"
+         }
+list2 = []
+print(dict3.values())
+for i in dict3.values():
+    if type(i) is int:
+        list2.append(i)
+    elif type(i) is list:
+        for x in i:
+            if type(x) is int:
+                list2.append(x)
+    elif type(i) is tuple:
+        for x in i:
+            if type(x) is int:
+                list2.append(x)
+    elif type(i) is dict:
+        for x in i.values():
+            if type(x) is int:
+                list2.append(x)
+print(list2)
+print(max(list2))
+"""
+Scenario 4
+"""
+list2 = []
+print(dict3.values())
+for i in dict3.values():
+    if type(i) is int:
+        list2.append(i)
+    elif type(i) is list:
+        list2.append(max(i))
+    elif type(i) is tuple:
+        list2.append(max(i))
+    elif type(i) is dict:
+        list2.append(max(i.values()))
+print(list2)
+print(max(list2))
 
