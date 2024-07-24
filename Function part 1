@@ -1,127 +1,128 @@
-#if we are planning to create a function in pythin we have to use "def"
+"""
+Function
+Always follow modular coding approach.
+Always use functions while writing a code.
+"""
+print(len("Good Morning."))
 
+
+#  How to create a function ?
 def test():
-  pass
+    pass
+
 
 def test1():
-  print("This is my first function")
+    print("This is my first function.")
 
-test1()
-type(test1()) # By default type of a function is "NoneType"
-str(test1()) # It will give you "None" (Default blank object)
+
+"""
+By default function returns a none type of data.
+"""
+
 
 def test2():
-  return "This is my second function"
+    return "This is my first function."
 
-test2()
-type(test2())
-test2() + " - by Suman"
 
 def test3():
-  return 242525
+    return 23
 
-test3()
-type(test3())
 
 def test4():
-  return 4,3,"Suman",[1,2,4,5,6]
+    #  By default, it will return tuple.
+    return 4, 3, 3, 6, "Suman", [1, 2, 3, 4, 5]
 
-b = test4()
-b
 
 def test5():
-  return 4,3,"Suman",[1,2,4,5,6], 4+12j
-
-x,y,u,v,w = test5()
-print(x)
-print(y)
-print(u)
-print(v)
-print(w)
-
-def test6():
-  a = 6*7/6
-  return a 
-test6()
-type(test6())
-
-#list as an input and list as n output 
-
-l = [3,4,5,6,7,7,"Suman",[1,2,4,5,"Sam"],(1,2,4,55,5,"12+14j",12+14j),{1:1,2:3,4:99}]
-
-def test7(a):
- 
-  if type(a) == list:
-    n = []
-    for i in a:
-      if type(i) == int:
-        n.append(i)
-      elif (type(i) == list or type(i) == tuple):
-        for j in i:
-          if type(j) == int:
-            n.append(j)
-      elif(type(i) == dict):
-        for k in i.values():
-          if (type(k) == int):
-            n.append(k)
-    return n
-  else:
-    return ("Please enter the list")
-test7(l)
-#min(test7(l))
-#max(test7(l))
-
-
-d = {1:"Suman",
-     2:"Suman1",
-     3:"Suman2",
-     4:"Suman3",
-     5:"Suman4",
-     6:"Suman5",
-     7:"Suman6",
-     "Kohinoor": 8
-     }
-
-def test8(a):
-  if type(a) == dict:
-    l = []
-    for i in a:
-      l.append(i)
-    return l
-  else:
-    return (a," Entered value is not a dictionary")
-
-p = "Suman"
-test8(p)
-
-
-def test9(a,b):
-  if type(a) == list and type(b) == list:
-    a.extend(b)
+    a = 6 * 7 / 6
     return a
-  else:
-
-    return ("Either of your data is not a list")
 
 
+print("Value inside test2() function is :", test2())
+print(type(test2()))
+print(type(test3()))
+print(type(test4()))
+print(test4())
+b = test4()
+print(b[:3:-1])
+
+i, j, c, d = 1, 5, "Dynamic", [1, 2, 3, 5, 5]
+print(c)
+
+print(test5())
+
+list1 = [3, 4, 6, 7, 3, 2, 2, 4, "Suman", [1, 25, 7, 9, 9]]
+list2 = "Suman"
 
 
-n = int(input("Enter the size of triangle: "))
-def triangle (a):
-  # Doc String 
-  """This is a function helps to create a triangle
-    you can enter the input as integer and it will return the triangle
-   """
-  if type(a) == int:
-    for i in range(0,n+1):
-      for j in range(0,i+1):
-         if i > j:
-           print(".",end = "")
-      print("\r\n")
-  else:
-    return ("Enter a int value for the size of traingle")
-triangle(n)
+def test6(a):
+    if type(a) is list:
+        var = []
+        for i in a:
+            if type(i) is int:
+                var.append(i)
+        return var
+    else:
+        return "Not a list"
 
 
-#test9(2424,"Suman") #Either of your data is not a list
-test9([1,2,4,5,6,7],[1,6,7,8,9,9])
+print(test6(list1))
+print(test6({3, 4, 5}))
+
+
+#  Take input as a dict and return the keys from it.
+
+def test8(c):
+    if type(c) is dict:
+        return c.keys()
+    else:
+        return "You have not passed a dictionary."
+
+
+print(test8("Suman"))
+print(test8({"a": "Suman", "b": "mal"}))
+
+
+# Take any number of inputs.
+
+def test9(a, b):
+    if type(a) is list and type(b) is list:
+        a.extend(b)
+        return a
+    else:
+        return "Either of your data is not list."
+
+
+print(test9([12], ["Suman"]))
+
+"""
+Create a function which is going to print 
+"""
+
+"""Doc String 
+Comments inside triple quotes inside a functione+. 
+
+"""
+
+
+def triangle(i):
+    """
+    This is a function to create a triangle.
+    You can give input as integer.
+    And you will get a triangle of that size.
+    :param i: int
+    :return: print triangle of size i
+    """
+    if type(i) is int and type(j) is int:
+        for x in range(0, i, 1):
+            for y in range(0, x, 1):
+                print("x", end=" ")
+            print("\t")
+        pass
+    else:
+        return "This is not a valid input."
+
+
+triangle(int(input("Enter the size of triangle: ")))
+
+help(triangle)
