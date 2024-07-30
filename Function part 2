@@ -85,3 +85,123 @@ def test9(**suman):
 
 print(test9(a=34, b=44, c=56, d=55, f=[1, 2, 3, 6.00]))
 
+print(test9(a=12, b=13, c=[1, 2, 3, 5, 6]))
+
+"""
+Create a generic function to fill all the personal information of a person
+"""
+
+
+def test10(**kwargs):
+    return kwargs
+
+
+print(test10(name=" Suman mal", age=27, phone=7272727, mail_id="sumanmalxrt@gmail.com", address="Home"))
+
+
+def test11(a, **kwargs):
+    return kwargs, a
+
+
+print(test11(45, t=67, b=78, c=7, d=8, e=78))
+
+# We cannot use kw asterisks before asterisks. This below mentioned function will give error
+"""
+def test12(a, **kwargs, *args):
+    return kwargs, a, args
+"""
+
+
+def test12(a, *args, **kwargs):
+    return kwargs, a, args
+
+
+print(test12(45, 55, 56, 44, 66, 4444, 64, ["Suman"], t=67, b=78, c=7, d=8, e=78))
+
+"""
+Create a lambda or anonymous function.
+lambda is a reserved keyword.
+Only used in small functions 
+"""
+var = lambda a, b: a * b
+print(var(4, 5))
+
+var2 = lambda a, b: (a + b, a * b)
+print(var2(2, 77))
+
+l1 = [1, 24, 5, 67, 44]
+l2 = []
+for i in l1:
+    l2.append(i)
+print(l2)
+l3 = ["Suman", 1, 24, 5, 67, 44]
+print([i for i in l3])
+
+'''
+x = lambda x: [i for i in x]
+print(x[45, 44, 44, 55, 55, 7])
+'''
+# Scenario 1
+a = 10
+
+
+def test13(c, d):
+    a = 5
+    return c * d
+
+
+print(test13(a, 11))
+
+# Scenario 2
+b = 10
+
+
+def test14(c, d):
+    b = 5
+    return c * d
+
+
+print(test14(b, 11))
+
+# Scenario 2
+# global declaration
+c = 10
+
+
+def test15(c, d):
+    # local declaration
+    # scope of c is within the function
+    c = 5
+    return c * d
+
+
+print(test14(c, 11))
+print(c)
+
+"""
+List comprehension 
+"""
+
+list1 = [1, 2, 4, 6, 7, 9, 900, 34, 44, 4]
+# add 2 in each element of this list and return list
+l1 = []
+for i in list1:
+    l1.append(i + 2)
+
+print(l1)
+
+
+def test16(a):
+    var = []
+    for i in a:
+        var.append(i + 2)
+    return var
+
+
+print(test16([1, 2, 4, 6, 7, 9, 900, 34, 44, 4]))
+
+a = lambda a: [i + 2 for i in a]
+print(a([1, 2, 4, 6, 7, 9, 900, 34, 44, 4]))
+
+var3 = [[i ** 2, i + i] for i in list1 if i < 4]
+print(var3)
