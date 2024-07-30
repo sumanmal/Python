@@ -1,1 +1,87 @@
+"""
+Passing multiple arguments
+"""
+
+
+def test1(a, b, c, d, e):
+    return a, b, c, d, e
+
+
+print(test1(1, 2, 3, 4, 5))
+
+"""
+*args - Denotes any number of input passed into a function.
+"""
+
+
+def test2(*args):
+    return args
+
+
+print(test2(3, "Suman", 4))
+print(test2(3, "Suman", 4, [1, "m", "n", "s"]))
+
+
+def test3(*suman):
+    return suman
+
+
+print(test3(3, "Suman", 4, True))
+
+"""
+If I have to pass specific variable along with asterisks 
+"""
+
+
+def test4(*args, a, c):
+    return args, a, c
+
+
+# print(test4(3, 4, 66))
+# How to solve this issue ?
+print(test4(3, 4, 5, a="v", c="Suman"))
+
+
+def test5(a, c, *args):
+    return a, c, args
+
+
+print(test5(3, 4, 5))
+
+
+def test6(a, *args, b, c, d):
+    return a, args, b, c, d
+
+
+print(test6(1, {1, 4, 5}, [1, 22, 3], 43, 5555, b=33, c=33, d=49 + 6j))
+
+
+def test7(*args):
+    var = []
+    for i in args:
+        if type(i) is list:
+            var.append(i)
+    return var
+
+
+print(test7(1, "Suman", 11, [1, 2, 3, 4], {1, 4, 66, 4}, "Corona", [12, 7774]))
+
+"""
+Pass N number of data - but as a key value pair 
+*kwargs 
+"""
+
+
+def test8(**kwargs):
+    return kwargs
+
+
+print(test8(a=34, b=44, c=56, d=55))
+
+
+def test9(**suman):
+    return suman
+
+
+print(test9(a=34, b=44, c=56, d=55, f=[1, 2, 3, 6.00]))
 
