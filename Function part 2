@@ -205,3 +205,26 @@ print(a([1, 2, 4, 6, 7, 9, 900, 34, 44, 4]))
 
 var3 = [[i ** 2, i + i] for i in list1 if i < 4]
 print(var3)
+
+"""
+Create a dictionary d where key will be number and value will be square of it.
+"""
+dict1 = {1: 1, 2: 4, 3: 9}
+
+var4 = {i: i ** 2 for i in range(1, 10, 2)}
+print(var4)
+
+
+def temp17(a):
+    dict2 = {}
+    for i in range(1, a):
+        dict2[i] = i ** 2
+    return dict2
+
+
+a = int(input("Enter the number:"))
+print(temp17(a))
+
+"""Tuple comprehension """
+var5 = tuple(i for i in range(10))
+print(var5)
