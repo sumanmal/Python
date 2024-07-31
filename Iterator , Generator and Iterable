@@ -1,1 +1,53 @@
+"""
+Iterator , Generator and Iterable
+"""
 
+"""
+a = 56
+for i in a:
+    print(i)
+# TypeError: 'int' object is not iterable
+"""
+
+s = "suman"
+for i in s:
+    print(i, end=" ")
+print("\r")
+"""
+next function
+print(next(s))
+# TypeError: 'str' object is not an iterator
+
+iterable object:
+If an object is holding a value with some indexes and if you can able to access it with the indexes then it is known as 
+iterable object.
+
+iterator object:
+
+
+"""
+# Convert same element in iterator.
+b = iter(s)
+print(next(b), end=" ")
+print(next(b), end=" ")
+print(next(b), end=" ")
+print(next(b), end=" ")
+print(next(b), end=" ")
+
+s2 = iter("add")
+print(next(s2), end=" ")
+print(next(s2), end=" ")
+print(next(s2), end=" ")
+print("\t")
+"""
+print(next(s2), end=" ")
+Error = StopIteration
+"""
+
+list1 = [1, 2, 6, 7, 9, 33]
+'''
+print(next(list1))
+TypeError: 'list' object is not an iterator
+'''
+var = iter([1334, 2, 6, 7, 9, 33])
+print(next(var))
